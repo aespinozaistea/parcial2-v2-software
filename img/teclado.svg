@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Teclado mecánico">
+  <defs>
+    <pattern id="teclas" width="27" height="25" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="22" height="19" rx="4" fill="#9fb0c3"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="#eef1f6"/>
+  <rect x="40" y="90" width="320" height="130" rx="14" fill="#cbd5e1"/>
+  <rect x="50" y="100" width="300" height="110" rx="10" fill="#ffffff"/>
+  <rect x="60" y="110" width="280" height="75" fill="url(#teclas)"/>
+  <rect x="145" y="190" width="110" height="14" rx="5" fill="#9fb0c3"/>
+</svg>

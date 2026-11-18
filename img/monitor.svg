@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Monitor de 24 pulgadas">
+  <rect width="400" height="300" rx="16" fill="#e8eef5"/>
+  <rect x="50" y="55" width="300" height="185" rx="12" fill="#263445"/>
+  <rect x="62" y="67" width="276" height="161" rx="6" fill="#0b7285"/>
+  <path d="M85 190l55-60 40 40 40-55 65 75" fill="none" stroke="#a9e4e4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="90" cy="95" r="14" fill="#5bc0be"/>
+  <rect x="180" y="240" width="40" height="25" fill="#263445"/>
+  <rect x="140" y="264" width="120" height="12" rx="6" fill="#263445"/>
+</svg>

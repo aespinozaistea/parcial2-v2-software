@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Audífonos inalámbricos">
+  <rect width="400" height="300" rx="16" fill="#e8eef5"/>
+  <path d="M110 180v-30a90 90 0 0 1 180 0v30" fill="none" stroke="#263445" stroke-width="18" stroke-linecap="round"/>
+  <rect x="88" y="160" width="52" height="88" rx="24" fill="#0b7285"/>
+  <rect x="260" y="160" width="52" height="88" rx="24" fill="#0b7285"/>
+  <rect x="100" y="176" width="28" height="56" rx="14" fill="#5bc0be"/>
+  <rect x="272" y="176" width="28" height="56" rx="14" fill="#5bc0be"/>
+</svg>

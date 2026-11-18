@@ -1,0 +1,337 @@
+:root {
+  --color-fondo: #f5f7fa;
+  --color-superficie: #ffffff;
+  --color-texto: #1f2933;
+  --color-secundario: #52606d;
+  --color-borde: #d9e2ec;
+  --color-acento: #0b7285;
+  --color-acento-oscuro: #075763;
+  --sombra: 0 4px 14px rgba(15, 42, 61, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+.contenedor {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.header-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.logo {
+  color: var(--color-acento-oscuro);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.site-header nav a {
+  color: var(--color-secundario);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  color: var(--color-acento);
+}
+
+.seccion-bienvenida {
+  padding: 3.5rem 0 3rem;
+  background: linear-gradient(135deg, #0b7285 0%, #104c5c 100%);
+  color: #ffffff;
+}
+
+.etiqueta {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a9e4e4;
+}
+
+.seccion-bienvenida h1 {
+  max-width: 720px;
+  margin: 0 0 1rem;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.intro {
+  max-width: 760px;
+  margin: 0 0 2rem;
+  color: #d9f0f1;
+}
+
+.grilla-institucional {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.tarjeta-institucional {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.tarjeta-institucional h2 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.tarjeta-institucional p {
+  margin: 0;
+  color: #e6f5f6;
+  font-size: 0.95rem;
+}
+
+.sello {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: var(--color-acento-oscuro);
+  font-weight: 800;
+}
+
+.seccion-productos {
+  padding: 3rem 0 4rem;
+}
+
+.seccion-productos h2 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  max-width: 680px;
+  margin: 0 0 1.5rem;
+  color: var(--color-secundario);
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.controles label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secundario);
+}
+
+.controles input {
+  flex: 1 1 240px;
+  max-width: 360px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+.controles input:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 1px;
+}
+
+.grilla-productos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+}
+
+.imagen-producto {
+  position: relative;
+  background-color: #eef2f6;
+}
+
+.imagen-producto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.etiqueta-stock {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.etiqueta-stock.disponible {
+  background-color: #1b7f5a;
+}
+
+.etiqueta-stock.bajo {
+  background-color: #b45309;
+}
+
+.etiqueta-stock.agotado {
+  background-color: #9f2d2d;
+}
+
+.detalle-producto {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.categoria {
+  margin: 0 0 0.2rem;
+  color: var(--color-acento);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.detalle-producto h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.15rem;
+}
+
+.datos-producto {
+  margin: 0 0 1rem;
+}
+
+.datos-producto > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--color-borde);
+}
+
+.datos-producto dt {
+  color: var(--color-secundario);
+  font-size: 0.85rem;
+}
+
+.datos-producto dd {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.muestra-color {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.precio {
+  margin-top: auto;
+  color: var(--color-acento-oscuro);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.mensaje-vacio {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-secundario);
+  background-color: var(--color-superficie);
+  border: 1px dashed var(--color-borde);
+  border-radius: 12px;
+}
+
+.site-footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-borde);
+  color: var(--color-secundario);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (min-width: 620px) {
+  .grilla-institucional {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grilla-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .grilla-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
