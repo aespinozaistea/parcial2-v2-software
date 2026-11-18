@@ -67,6 +67,7 @@
   var listado = document.getElementById("listado-productos");
   var mensajeVacio = document.getElementById("mensaje-vacio");
   var buscador = document.getElementById("buscador");
+  var orden = document.getElementById("orden");
 
   function crearDato(titulo, valor) {
     var contenedor = document.createElement("div");
@@ -156,7 +157,21 @@
     mensajeVacio.hidden = listaProductos.length !== 0;
   }
 
-  function filtrar() {
+  function ordenar(lista, criterio) {
+    var copia = lista.slice();
+
+    if (criterio === "precio-asc") {
+      copia.sort(function (a, b) { return a.precio - b.precio; });
+    } else if (criterio === "precio-desc") {
+      copia.sort(function (a, b) { return b.precio - a.precio; });
+    } else if (criterio === "nombre") {
+      copia.sort(function (a, b) { return a.nombre.localeCompare(b.nombre, "es"); });
+    }
+
+    return copia;
+  }
+
+  function actualizarCatalogo() {
     var texto = buscador.value.trim().toLowerCase();
 
     var resultados = productos.filter(function (producto) {
@@ -164,9 +179,10 @@
         producto.categoria.toLowerCase().indexOf(texto) !== -1;
     });
 
-    renderizar(resultados);
+    renderizar(ordenar(resultados, orden.value));
   }
 
-  buscador.addEventListener("input", filtrar);
+  buscador.addEventListener("input", actualizarCatalogo);
+  orden.addEventListener("change", actualizarCatalogo);
   renderizar(productos);
 })();
